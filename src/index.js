@@ -1,3 +1,11 @@
+function search(event) {
+  event.preventDefault();
+  let searchedInputElement = document.querySelector("#search-input");
+  let city = searchedInputElement.value;
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = city;
+}
+
 function formatCurrentDate(date) {
   let days = [
     "Sunday",
@@ -26,3 +34,6 @@ function formatCurrentDate(date) {
 let currentDate = new Date();
 let currentDateElement = document.querySelector("#current-date");
 currentDateElement.innerHTML = formatCurrentDate(currentDate);
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
