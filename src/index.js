@@ -5,6 +5,9 @@ function displayWeatherInfo(response) {
 
   let weatherElement = document.querySelector("#current-condition");
   weatherElement.innerHTML = response.data.condition.description;
+
+  let humidityElement = document.querySelector("#current-humidity");
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 }
 
 function search(event) {
