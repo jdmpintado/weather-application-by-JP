@@ -21,7 +21,30 @@
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
-      <main></main>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p class="current-info">
+              <span id="current-date">Day HH:MM</span>
+              <span id="current-condition">moderate rain</span>
+              <br />
+              Humidity: <strong id="current-humidity">87%</strong>, Wind:
+              <strong id="current-wind">7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="current-temperature-icon"
+              ><img
+                id="tempIcon"
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-night.png"
+                alt="rain-day"
+            /></span>
+            <span class="current-temperature" id="current-temperature">14</span>
+            <span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+      </main>
       <footer>
         <p>
           This project was coded by
