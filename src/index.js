@@ -13,6 +13,10 @@ function displayWeatherInfo(response) {
   let wind = response.data.wind.speed;
   wind = Math.round(((wind * 3600) / 1000) * 10) / 10;
   windElement.innerHTML = `${wind}km/h`;
+
+  let temperature = Math.round(response.data.temperature.current);
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = `${temperature}`;
 }
 
 function search(event) {
