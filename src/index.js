@@ -8,6 +8,11 @@ function displayWeatherInfo(response) {
 
   let humidityElement = document.querySelector("#current-humidity");
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+  let windElement = document.querySelector("#current-wind");
+  let wind = response.data.wind.speed;
+  wind = Math.round(((wind * 3600) / 1000) * 10) / 10;
+  windElement.innerHTML = `${wind}km/h`;
 }
 
 function search(event) {
