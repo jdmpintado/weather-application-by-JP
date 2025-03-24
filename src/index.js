@@ -17,6 +17,12 @@ function displayWeatherInfo(response) {
   let temperature = Math.round(response.data.temperature.current);
   let temperatureElement = document.querySelector("#current-temperature");
   temperatureElement.innerHTML = `${temperature}`;
+
+  let newIconElement = response.data.condition.icon_url;
+  let newIconCaption = response.data.condition.icon;
+  let imageElement = document.getElementById("tempIcon");
+  imageElement.setAttribute("src", newIconElement);
+  imageElement.setAttribute("alt", newIconCaption);
 }
 
 function search(event) {
